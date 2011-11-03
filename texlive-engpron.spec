@@ -1,3 +1,9 @@
+# revision 16558
+# category Package
+# catalog-ctan /macros/latex/contrib/engpron
+# catalog-date 2008-08-16 17:33:04 +0200
+# catalog-license lppl
+# catalog-version 2
 Name:		texlive-engpron
 Version:	2
 Release:	1
@@ -57,6 +63,7 @@ typeset the pronunciation in the style of Harrap's dictionary.
 %doc %{_texmfdistdir}/source/latex/engpron/Makefile
 %doc %{_texmfdistdir}/source/latex/engpron/engpron.dtx
 %doc %{_texmfdistdir}/source/latex/engpron/engpron.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -67,3 +74,5 @@ typeset the pronunciation in the style of Harrap's dictionary.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
