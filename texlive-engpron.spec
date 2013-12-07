@@ -6,7 +6,7 @@
 # catalog-version 2
 Name:		texlive-engpron
 Version:	2
-Release:	5
+Release:	6
 Summary:	Helps to type the pronunciation of English words
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/engpron
