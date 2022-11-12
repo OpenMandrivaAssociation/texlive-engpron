@@ -1,19 +1,13 @@
-# revision 16558
-# category Package
-# catalog-ctan /macros/latex/contrib/engpron
-# catalog-date 2008-08-16 17:33:04 +0200
-# catalog-license lppl
-# catalog-version 2
 Name:		texlive-engpron
-Version:	2
-Release:	11
+Version:	16558
+Release:	1
 Summary:	Helps to type the pronunciation of English words
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/engpron
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/engpron.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/engpron.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/engpron.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/engpron.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/engpron.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/engpron.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ Pronouncing Dictionary' by Daniel Jones. There is an option to
 typeset the pronunciation in the style of Harrap's dictionary.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -56,24 +50,11 @@ typeset the pronunciation in the style of Harrap's dictionary.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2-2
-+ Revision: 751438
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2-1
-+ Revision: 718334
-- texlive-engpron
-- texlive-engpron
-- texlive-engpron
-- texlive-engpron
-
