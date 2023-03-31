@@ -1,6 +1,6 @@
 Name:		texlive-engpron
 Version:	16558
-Release:	1
+Release:	2
 Summary:	Helps to type the pronunciation of English words
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/engpron
