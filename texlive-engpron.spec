@@ -3,7 +3,7 @@ Version:	16558
 Release:	2
 Summary:	Helps to type the pronunciation of English words
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/engpron
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/engpron
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/engpron.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/engpron.doc.r%{version}.tar.xz
